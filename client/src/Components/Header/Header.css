@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f3f3;
+    color: #333;
+    box-shadow: 0 8px 10px -4px rgb(0 0 0 / 0.1), 0 4px 6px -5px rgb(0 0 0 / 0.1);
+    margin-bottom: 16px;
+}
+
+
+.header-title{
+    word-spacing: 8px;
+}
