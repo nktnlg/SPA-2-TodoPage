@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Content.css"
 import Task from "./Task"
 
@@ -10,7 +10,7 @@ const TaskColumn = ({title, tasks})=>{
               {title} 
         </h2>
         <div id="urgent-high-tasks">
-            {tasks.map(t => <Task task={t}/>)}
+            {tasks.map(t => <Task task={t} key={t.id}/>)}
         </div>
     </div>)}
 export default TaskColumn
