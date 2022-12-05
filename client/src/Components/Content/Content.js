@@ -16,7 +16,7 @@ const Content = ()=>{
     const [tasksHighUrgence, setTasksHighUrgence] = useState([])
     const [tasksAverageUrgence, setTasksAverageUrgence] = useState([])
     const [tasksLowUrgence, setTasksLowUrgence] = useState([])
-    //OPEN MODAL
+    // MODAL
     const openTaskModal = (task) => { setModal(task)};
     const closeTaskModal = () => {setModal('')};
 
@@ -40,7 +40,6 @@ const Content = ()=>{
 
     //DELETE TASK
     const deleteTask = (deletedTaskId) => {
-        console.log(deletedTaskId)
         const newTasks = tasks.filter(task => task.id !== deletedTaskId)
         localStorage.setItem('tasks', JSON.stringify(newTasks))
         setTasks(JSON.parse(localStorage.getItem('tasks')));

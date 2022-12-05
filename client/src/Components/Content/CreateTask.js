@@ -40,7 +40,13 @@ const CreateTask = ({addNewTask})=>{
         
 
         <div id="form-new-description" className="form-new-description">
-            <div id="new-task-description" name="new-task-description" className="new-task-description" type="text" contentEditable={!isDisabled} onInput={(e)=>setTaskDescription(e.currentTarget.textContent)}></div>
+            <textarea id="new-task-description" 
+            name="new-task-description" 
+            className="new-task-description" 
+            type="textarea" 
+            value={taskDescription}
+            onChange={(e)=>setTaskDescription(e.target.value)}/>
+
             <label id="new-task-description-label" className="new-task-description-label" htmlFor="new-task-description">Description</label>
         </div>
 
