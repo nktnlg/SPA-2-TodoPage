@@ -1,3 +1,4 @@
+
 .content{
     display: grid;
 }
@@ -126,17 +127,26 @@
 .form-new-description {
     position: relative;
     margin-bottom: 14px;
+    width: 100%;
 }
 
 .new-task-description {
+    resize: none; 
     padding: 8px;
-    height: 60px;
+    height: 80px;
+
+    box-sizing: border-box;
+    width: 100%;
     
     overflow: auto;
     word-break:break-word;
 
     border: 2px solid #ccc;
     border-radius: 0.5rem;
+
+    font-size: 1rem; /* 16px */
+    line-height: 1.25rem; 
+    font-family: sans-serif;
 }
 .new-task-description:focus {
     outline: 2px solid transparent;
@@ -169,6 +179,7 @@
     margin-bottom: 14px;
 }
 .new-task-urgency-select {
+    font-size: 1rem;
     height: 28px;
     width: 100%;
     border: 2px solid #ccc;

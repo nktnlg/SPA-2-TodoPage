@@ -11,14 +11,15 @@ const Content = ()=>{
 
     //STATES
     const [modal, setModal] = useState('')
+    const [edit, setEdit] = useState(false)
 
     const [tasks, setTasks] = useState([])
     const [tasksHighUrgence, setTasksHighUrgence] = useState([])
     const [tasksAverageUrgence, setTasksAverageUrgence] = useState([])
     const [tasksLowUrgence, setTasksLowUrgence] = useState([])
-    //OPEN MODAL
+    // MODAL
     const openTaskModal = (task) => { setModal(task)};
-    const closeTaskModal = () => {setModal('')};
+    const closeTaskModal = () => {setModal(''); setEdit(false)};
 
     //NEW TASK
     const addNewTask = (newTask) => {
@@ -40,10 +41,22 @@ const Content = ()=>{
 
     //DELETE TASK
     const deleteTask = (deletedTaskId) => {
-        console.log(deletedTaskId)
         const newTasks = tasks.filter(task => task.id !== deletedTaskId)
         localStorage.setItem('tasks', JSON.stringify(newTasks))
         setTasks(JSON.parse(localStorage.getItem('tasks')));
+    };
+
+    //MODIFY TASK
+    const modifyTask = (modifiedTask)=>{
+        const newTasks = tasks.map((v)=>{
+            if (v.id === modifiedTask.id){return modifiedTask}
+            else{return v}
+        })
+        localStorage.setItem('tasks', JSON.stringify(newTasks))
+        setTasks(JSON.parse(localStorage.getItem('tasks')));
+        setEdit(false)
+        openTaskModal(modifiedTask)
+
     };
 
 
@@ -76,7 +89,12 @@ const Content = ()=>{
                 <TaskColumn title="Low Priority" tasks={tasksLowUrgence}/>
             </FuncContext.Provider>
         </div>
-        <Modal modal={modal} closeModal={closeTaskModal}/>
+        <Modal 
+        modal={modal} 
+        closeModal={closeTaskModal}
+        edit={edit}
+        setEdit={setEdit}
+        modifyTask={modifyTask}/>
     </div>)
 };
 
