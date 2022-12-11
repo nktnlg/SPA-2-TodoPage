@@ -4,7 +4,6 @@ import "./Task.css"
 
 const Task = ({task})=>{
 
-   
     const functionality = useContext(FuncContext);
     return (
     
@@ -17,4 +16,4 @@ const Task = ({task})=>{
                 <div id="urgent-high-1" className="task-card" onClick={()=>{functionality.openTaskModal(task)}}>{task.taskName}</div>
             </div>)}
 
-export default Task
+export default Task;

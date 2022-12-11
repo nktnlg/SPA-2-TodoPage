@@ -7,7 +7,7 @@ const CreateTask = ({addNewTask})=>{
     const [taskName, setTaskName] = useState('');
     const [taskDescription, setTaskDescription] = useState('');
     const [taskUrgency, setTaskUrgency] = useState('Low');
-    
+    //24
     
     const taskSubmit = (e) => {
 
@@ -33,7 +33,7 @@ const CreateTask = ({addNewTask})=>{
         <h2 id="form-new-tite" className="form-new-title">Create New Task</h2>
         
         <div id="form-new-name" className="form-new-name" >
-            <input id="new-task-name-input" className="new-task-name-input" name="new-task-name-input" type="text" placeholder="task name" disabled={isDisabled} value={taskName} onChange={(e)=>setTaskName(e.target.value)}/>
+            <input id="new-task-name-input" className="new-task-name-input" name="new-task-name-input" type="text" placeholder="task name" disabled={isDisabled} value={taskName} onChange={(e)=>setTaskName(e.target.value)} maxLength={24}/>
             <label id="new-task-name-input-label" className="new-task-name-input-label" htmlFor="new-task-name-input">Task Name</label>
         </div>
         

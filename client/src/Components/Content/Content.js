@@ -66,9 +66,11 @@ const Content = ()=>{
         setTasks(JSON.parse(localStorage.getItem('tasks')));
     }, [])
     useEffect(()=>{
-        setTasksHighUrgence(tasks.filter(task => task.taskUrgency === 'High'));
-        setTasksAverageUrgence(tasks.filter(task => task.taskUrgency === 'Average'));
-        setTasksLowUrgence(tasks.filter(task => task.taskUrgency === 'Low'));
+            if (tasks){
+            setTasksHighUrgence(tasks.filter(task => task.taskUrgency === 'High'));
+            setTasksAverageUrgence(tasks.filter(task => task.taskUrgency === 'Average'));
+            setTasksLowUrgence(tasks.filter(task => task.taskUrgency === 'Low'));}
+        
     }, [tasks])
 
     

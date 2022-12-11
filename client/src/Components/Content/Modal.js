@@ -33,7 +33,7 @@ const Modal = props => {
         <div className="modal" onClick={props.closeModal}>
             <div className="modal-content" onClick={e => e.stopPropagation()}>
              <div className="modal-header">
-                {props.edit ? <div className="modal-title-margin"><input className="modal-title-input" value={taskName} onChange={(e)=>setTaskName(e.target.value)}></input></div>:
+                {props.edit ? <div className="modal-title-margin"><input className="modal-title-input" value={taskName} onChange={(e)=>setTaskName(e.target.value)} maxLength={24}></input></div>:
                 <h3 className="modal-title">{taskName}</h3>
                 }
              </div>
