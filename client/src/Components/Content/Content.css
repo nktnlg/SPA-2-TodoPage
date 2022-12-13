@@ -133,7 +133,7 @@
 .new-task-description {
     resize: none; 
     padding: 8px;
-    height: 80px;
+    height: 200px;
 
     box-sizing: border-box;
     width: 100%;
