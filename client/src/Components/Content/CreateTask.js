@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Content.css"
+import "./Content.scss"
 
 const CreateTask = ({addNewTask})=>{
 

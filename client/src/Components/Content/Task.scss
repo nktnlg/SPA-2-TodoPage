@@ -1,3 +1,18 @@
+@import '../Content/Content';
+//VARIABLES USED
+/*
+$text-color
+$task-border-color
+$task-base-color
+$modal-base-color
+$task-contrast-color
+$alert-color
+
+$task-high
+$task-medium
+$task-low 
+*/
+
 /* MODAL */
 
 .modal {
@@ -16,8 +31,8 @@
     display: inline-flex;
     flex-direction: column;
     width: 400px;
-    background-color: #f3f3f3;
-    color: #2a2a2a;
+    background-color: $modal-base-color;
+    color: $text-color;
     border-radius: 0.5rem;
 }
 .modal-header {
@@ -31,7 +46,7 @@
     margin-left: 15px;
     margin-right: 15px;
     padding: 0.75rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid $task-base-color;
 
     font-size: 1.5rem; /* 16px */
     line-height: 1.75rem; 
@@ -43,7 +58,7 @@
     margin-right: 7px;
     padding: 0.25rem;
 
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid $task-base-color;
 
 }
 .modal-title-input {
@@ -80,7 +95,7 @@
     margin-left: 15px;
     margin-right: 15px;
 
-    background-color: #f3f3f3;
+    background-color: $modal-base-color;
 
     border: solid 1px rgba(0,0,0,0);
 
@@ -98,7 +113,7 @@
 .modal-footer {
     margin-top: 5px;
     padding: 10px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid $task-base-color;
     margin-left: 15px;
     margin-right: 15px;
 }
@@ -115,15 +130,15 @@
     border-radius: 0.5rem;
     border: 0;
 
-    background-color: white;
-    border: 1px solid #eee;
+    background-color: $task-contrast-color;
+    border: 1px solid $task-base-color;
 
 
     transition-duration: 500ms;
     transition-timing-function: ease-in-out;
 }
 .modal-button:hover {
-    background-color: #eee;
+    background-color: $task-base-color;
 }
 
 /* TASK */
@@ -148,12 +163,12 @@
     padding-right: 30px;
     align-items: center;
     font-size: 1.1rem;
-    color: #2a2a2a;
-    border: 1px solid #ddd;
+    color: $text-color;
+    border: 1px solid $task-border-color;
 
-    background-color: #eee;
+    background-color: $task-base-color;
     border-radius: 0.5rem;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 
     word-break: break-all;
     overflow: hidden;
@@ -163,21 +178,34 @@
 }
 .task-card:hover{
 
-    background-color: white;
+    background-color: $task-contrast-color;
 
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     transition-duration: 500ms;
     transition-timing-function: ease-in-out;
 }
 
 
 .task-cross-svg:hover path {
-    stroke: darkred;
+    stroke: $alert-color;
   }
   
 .task-cross:hover + .task-card {
-    background-color: white;
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    background-color: $task-contrast-color;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 
+
+
+//new
+.highPriorityTask:hover {
+    background-color: $task-high
+}
+.mediumPriorityTask:hover{
+    background-color: $task-medium
+}
+.lowPriorityTask:hover{
+    background-color: $task-low
+}
+//old

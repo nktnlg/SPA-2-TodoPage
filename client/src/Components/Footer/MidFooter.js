@@ -1,6 +1,5 @@
 import React from "react";
-import './MidFooter.css'
-import '../Footer.css'
+import './Footer.scss'
 
 const MidFooter = ()=>{
     return (

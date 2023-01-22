@@ -1,0 +1,131 @@
+$text-color: #000;
+$text-secondary-color: #333;
+$background-color: #dabcff;
+$footer-background-color: #6a329f;
+
+//MAIN
+.footer {
+    background-color: $background-color;
+    color: $text-color;
+}
+.link{
+    text-decoration: none;
+    color: $text-secondary-color;
+}
+.link:hover{
+    color: $text-color;
+}
+
+.semibold{
+    font-weight: 600;
+}
+//TOP FOOTER
+.footer-top {
+    display: flex;
+    padding: 24px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid $text-secondary-color;
+}
+.contacts-label {
+    display: none;
+}
+
+.contacts-links {
+    display: flex;
+}
+
+.icon-link {
+    margin-right: 24px;
+}
+
+.icon-svg-10 {
+    width: 10px;
+}
+.icon-svg-14 {
+    width: 14px;
+}
+.icon-svg-16 {
+    width: 16px;
+}
+
+@media (min-width: 768px) { 
+    .footer-top {
+        justify-content: space-between;
+    }
+    .contacts-label {
+        display: block;
+     }
+ }
+
+//MID FOOTER
+.footer-mid {
+    margin-inline: 1.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;;
+    text-align: center;
+}
+
+.footer-mid-grid {
+ display: grid;
+ gap: 32px;
+}
+
+
+
+.footer-column-grid{
+    display: grid;
+    gap: 16px;
+}
+.footer-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.footer-contacts {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+.footer-contacts-svg {
+    width: 16px;
+    margin-right: 16px;
+}
+
+@media (min-width: 768px) {
+    .footer-mid-grid{
+        grid-template-columns: repeat(2, 1fr)
+    }
+    .footer-mid {
+        text-align: left;
+    }
+    .footer-title {
+        justify-content: start;
+    }
+    .footer-contacts {
+        justify-content: start;
+    }
+ }
+
+ @media (min-width: 1024px) {
+    .footer-mid-grid{
+        grid-template-columns: repeat(4, 1fr)
+    }
+ }
+
+ //BOT FOOTER
+ .footer-bot {
+    padding: 24px;
+    text-align: center;
+    background-color: $footer-background-color;
+    color: $background-color;
+}
+.link-bot{
+    text-decoration: none;
+    color: $background-color;
+}
+.link-bot:hover{
+    color: $text-secondary-color;
+}

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import "./Task.css"
+import "./Task.scss"
 const Modal = props => {
     const [taskName, setTaskName] = useState(props.modal.taskName);
     const [taskDescription, setTaskDescription] = useState(props.modal.taskDescription);
@@ -37,9 +37,11 @@ const Modal = props => {
                 <h3 className="modal-title">{taskName}</h3>
                 }
              </div>
+
                 {props.edit ? 
                 <textarea className="modal-body-edit" value={taskDescription} onChange={(e)=>setTaskDescription(e.target.value)}></textarea> : 
                 <textarea className="modal-body" value={taskDescription}></textarea> }
+             
              <div className="modal-footer">
                 <div className="modal-buttons">
                 {props.edit ? <div className="modal-buttons">

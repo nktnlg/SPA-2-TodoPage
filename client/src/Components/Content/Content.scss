@@ -1,20 +1,88 @@
+//RAINBOW
+$base-red: #ffbebe;
+$base-orange: #ffe6be;
+$base-yellow: #ffffbe;
+$base-green: #beffbe;
+$base-cyan: rgb(190, 255, 255);
+$base-violet: rgb(190, 190, 255);
+$base-rose: rgb(255, 190, 255);
+
+
+//MAIN THEME
+$text-color: #000;
+$text-secondary-color: #666;
+$text-ghost: $text-color;
+$border-color-ghost: #aaa;
+
+$base-element-color: #89cd5d;
+$contrast-element-color: #89cd5d;
+$border-color: #6a329f;
+$hover-base-color: #eee;
+//TASK COLUMNS
+$high-text:$text-color;
+$medium-text:$text-color;
+$low-text:$text-color;
+//TASK THEME
+$task-border-color: transparent;
+$task-base-color: #dabcff;
+$modal-base-color: #ecdaff;
+$task-contrast-color: #beffbe;
+$alert-color: darkred;
+$task-high: $task-contrast-color;
+$task-medium: $task-contrast-color;
+$task-low: $task-contrast-color;
+
+body{
+    background-color: $border-color;
+}
+
+/* $high-text:rgb(148, 21, 21);
+$medium-text:rgb(202, 95, 7);
+$low-text:rgb(47, 139, 5);
+//MAIN THEME
+$text-color: #333;
+$text-secondary-color: #666;
+$text-ghost: rgb(193, 71, 0);
+$border-color-ghost: #aaa;
+$border-color: #fb9852;
+$hover-base-color: #eee;
+
+$base-element-color: #e5e3ff;
+$contrast-element-color: #f1c0ff;
+$contrast-element-color: #dabcff;
+$alert-color: red; 
+#d7ffdf
+body{
+    background-color: #69eeee;
+}
+*/
+
+
+
+
+
+
 
 .content{
     display: grid;
 }
 .card {
-    margin: 12px;
-    padding: 26px;
-    background-color: #f3f3f3;
-    color: #2a2a2a;
+    margin: 0.25rem;
+    padding: 0.75rem;
+    background-color: $base-element-color;
+    color: $text-color;
     border-radius: 0.5rem;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
 
 .create-tasks-card-form {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 2.75rem;
+    margin-right: 1.25rem;
     padding: 16px;
-    background-color: white;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    background-color: $contrast-element-color;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.5);
     border-radius: 0.5rem;
     
 
@@ -22,17 +90,20 @@
     transition-timing-function: ease-in-out;
 }
 
-.create-tasks-card-form:hover{
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+/* .create-tasks-card-form:hover{
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     transition-duration: 500ms;
     transition-timing-function: ease-in-out;
-}
+} */
 
 
 
 .show-tasks-card{
       display: grid;
       column-gap: 12px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.5);
+      margin-top: 1rem;
+      margin-bottom: 2rem;
 }
 
 .column-title {
@@ -42,7 +113,7 @@
     font-size: 24px;
     line-height: 1.25;
     font-weight: 600;
-    border-bottom: 1px solid #999
+    border-bottom: 1px solid $text-ghost
 
 }
 
@@ -80,13 +151,14 @@
     width: 100%;
     height: 32px;
     border: 0px;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid $border-color;
 
     font-size: 1rem; /* 16px */
-    line-height: 1.5rem; /* 24px */     
+    line-height: 1.5rem; /* 24px */ 
+    background-color: $contrast-element-color !important;    
 }
 .new-task-name-input:focus{
-    border-bottom: 2px solid #aaa;
+    border-bottom: 2px solid $border-color;
 
     outline: 2px solid transparent;
     outline-offset: 2px;    
@@ -111,7 +183,7 @@
 
     font-size: 1rem; /* 16px */
     line-height: 1.5rem; /* 24px */   
-    color: #999; 
+    color: $text-ghost; 
 }
 
 .new-task-name-input:focus + .new-task-name-input-label {
@@ -119,7 +191,7 @@
 
     font-size: 0.875rem; /* 14px */
     line-height: 1.25rem; /* 20px */
-    color: #333;
+    color: $text-color;
     
 }
 /* INPUT DESC */
@@ -131,6 +203,7 @@
 }
 
 .new-task-description {
+    background-color: $contrast-element-color; 
     resize: none; 
     padding: 8px;
     height: 200px;
@@ -141,7 +214,7 @@
     overflow: auto;
     word-break:break-word;
 
-    border: 2px solid #ccc;
+    border: 2px solid $border-color;
     border-radius: 0.5rem;
 
     font-size: 1rem; /* 16px */
@@ -151,7 +224,7 @@
 .new-task-description:focus {
     outline: 2px solid transparent;
     outline-offset: 2px;   
-    border: 2px solid #aaa;
+    border: 2px solid $border-color;
 }
 
 .new-task-description-label{
@@ -160,9 +233,9 @@
     top: -10px;
     font-size: 0.875rem; /* 14px */
     line-height: 1.25rem; /* 20px */
-    color: #999;
+    color: $text-ghost;
 
-    background-color: white;
+    background-color: $contrast-element-color;
     padding-left: 8px;
     padding-right: 8px;
 
@@ -171,7 +244,7 @@
     transition-duration: 150ms;     
 }
 .new-task-description:focus + .new-task-description-label{
-    color: #333;
+    color: $text-color;
 }
 
 /* SELECT URGENCY */
@@ -179,17 +252,16 @@
     margin-bottom: 14px;
 }
 .new-task-urgency-select {
+    background-color: $contrast-element-color; 
     font-size: 1rem;
     height: 28px;
     width: 100%;
-    border: 2px solid #ccc;
+    border: 2px solid $border-color;
     border-radius: 0.5rem;
-
 }
-.new-task-urgency-select {
+.new-task-urgency-select:focus {
     outline: 2px solid transparent;
-    outline-offset: 2px;   
-    border: 2px solid #aaa;
+    outline-offset: 2px;
 }
 /* SUBMIT BUTTON */
 .form-new-submit {
@@ -205,18 +277,43 @@
 
     font-size: 0.875rem; /* 14px */
     line-height: 1rem; /* 20px */
-    color: #333;
+    color: $text-color;
 
-    border: 1px solid #eee;
+    border: 1px solid transparent;
     border-radius: 0.5rem;
 
     transition-duration: 500ms;
     transition-timing-function: ease-in-out;
 }
 .form-new-submit:hover {
-    background-color: #eee;
+    background-color: $hover-base-color;
 }
 .form-new-submit:disabled{
-    background-color: #eee;
-    color: #999;
+    background-color: $contrast-element-color;
+    color: $text-ghost;
+    cursor: not-allowed;
+    border: 1px solid $hover-base-color;
 }
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #89cd5d inset !important;
+}
+
+//new
+.highPriorityColumn {
+    color: $high-text;
+    border-bottom: 2px solid darkred
+}
+.mediumPriorityColumn{
+    color: $medium-text;
+    border-bottom: 2px solid rgb(215, 111, 0)
+}
+.lowPriorityColumn{
+    color: $low-text;
+    border-bottom: 2px solid green
+}
+//old

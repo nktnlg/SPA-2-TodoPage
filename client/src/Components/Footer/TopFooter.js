@@ -1,5 +1,5 @@
 import React from "react";
-import './TopFooter.css'
+import './Footer.scss'
 
 const TopFooter = ()=>{
     return (

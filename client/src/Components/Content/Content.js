@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Content.css"
+import "./Content.scss"
 import CreateTask from "./CreateTask";
 import TaskColumn from "./TaskColumn";
 import Modal from "./Modal";
@@ -81,13 +81,13 @@ const Content = ()=>{
 
     return (
     <div id="content"  className="content">
-        <div id="create-tasks-card" className="card">
+        
             <CreateTask addNewTask={addNewTask}/>
-        </div>
+        
         <div id="show-tasks-card" className="card show-tasks-card">
             <FuncContext.Provider value={{deleteTask, openTaskModal}}>
-                <TaskColumn title="Urgent" tasks={tasksHighUrgence}/>
-                <TaskColumn title="To do" tasks={tasksAverageUrgence}/>
+                <TaskColumn title="High Priority" tasks={tasksHighUrgence}/>
+                <TaskColumn title="Medium Priority" tasks={tasksAverageUrgence}/>
                 <TaskColumn title="Low Priority" tasks={tasksLowUrgence}/>
             </FuncContext.Provider>
         </div>

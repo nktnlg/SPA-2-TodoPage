@@ -1,7 +1,7 @@
 import React from "react";
-import './Footer.css'
-import MidFooter from "./MidFooter/MidFooter";
-import TopFooter from "./TopFooter/TopFooter";
+import './Footer.scss'
+import MidFooter from "./MidFooter";
+import TopFooter from "./TopFooter";
 import BotFooter from "./BotFooter";
 
 const Footer = ()=>{
