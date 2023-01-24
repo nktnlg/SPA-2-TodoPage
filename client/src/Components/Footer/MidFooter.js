@@ -12,19 +12,16 @@ const MidFooter = ()=>{
             <div id="footer-mid-grid-portfolio">
                 <h5 id="footer-portfolio-title" className="footer-title">Portfolio cases</h5>
                 <div id="footer-portfolio-grid" className="footer-column-grid">        
-                    <a id="footer-portfolio-1" href="https://fathomless-oasis-87358.herokuapp.com/" rel="noreferrer" target="_blank" className="link">MEAN Chat</a>
-                    <a id="footer-portfolio-2" href="https://mern-chat-nktnlg.herokuapp.com/" rel="noreferrer" target="_blank" className="link">MERN Chat</a>
-                    <a id="footer-portfolio-3" href="https://github.com/nktnlg/Project-2-JS-exercise-library" rel="noreferrer" target="_blank" className="link">JS Exercises</a>
-                    <a id="footer-portfolio-4" href="https://page-draft.firebaseapp.com/" rel="noreferrer" target="_blank" className="link">Learning center</a>
+                    <a id="footer-portfolio-1" href="https://nktnlg-notebook-angular.web.app/" rel="noreferrer" target="_blank" className="link">Notebook Angular</a>
                 </div>
             </div>
             <div id="footer-mid-grid-useful">
                 <h5 id="footer-useful-title" className="footer-title">Useful links</h5>
                 <div id="footer-useful-grid" className="footer-column-grid">
-                    <a id="footer-useful-1" href="/" rel="noreferrer" target="_blank" className="link">About me</a>
-                    <a id="footer-useful-2" href="/" rel="noreferrer" target="_blank" className="link">Services pricing</a>
+                    <a id="footer-useful-1" href="https://github.com/nktnlg" rel="noreferrer" target="_blank" className="link">About me</a>
+{/*                     <a id="footer-useful-2" href="/" rel="noreferrer" target="_blank" className="link">Services pricing</a>
                     <a id="footer-useful-3" href="/" rel="noreferrer" target="_blank" className="link">Feedback</a>
-                    <a id="footer-useful-4" href="/" rel="noreferrer" target="_blank" className="link">Help</a>
+                    <a id="footer-useful-4" href="/" rel="noreferrer" target="_blank" className="link">Help</a> */}
                 </div>
             </div>
             <div id="footer-mid-grid-contacts">

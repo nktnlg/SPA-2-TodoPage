@@ -12,6 +12,7 @@ const CreateTask = ({addNewTask})=>{
     const taskSubmit = (e) => {
 
         setIsDisabled(true);
+        if (taskName.trim().length === 0)return;
         if (taskName && taskUrgency){
             const newTask = {
                 taskName,taskDescription,taskUrgency, id: Date.now()
